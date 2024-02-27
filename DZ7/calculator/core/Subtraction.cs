@@ -1,5 +1,6 @@
-﻿using System;
-using System.Numerics;
+﻿
+
+using DZ7.core;
 
 namespace DZ7
 {
@@ -7,7 +8,7 @@ namespace DZ7
     {
         public override Complex GetResult(Complex z1, Complex z2)
         {
-            return new Complex (z1.Real - z2.Real,z1.Imaginary - z2.Imaginary);
+            return new Complex (z1.Real - z2.Real,z1.Img - z2.Img);
         }
     }
 }

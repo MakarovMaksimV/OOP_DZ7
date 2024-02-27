@@ -1,11 +1,15 @@
-﻿using System;
+﻿
 
 namespace DZ7.core
 {
-    class Complex
+    public class Complex
     {
         private double real;
         private double img;
+
+        public Complex()
+        {
+        }
 
         public Complex(double real, double img)
         {
@@ -23,16 +27,6 @@ namespace DZ7.core
         {
             get { return img; }
             set { img = value; }
-        }
-
-        public Complex complexNumber1(double real, double img)
-        {
-            return new Complex(real, img);
-        }
-
-        public Complex complexNumber2(double real, double img)
-        {
-            return new Complex(real, img);
         }
 
     }

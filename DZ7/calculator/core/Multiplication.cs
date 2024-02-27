@@ -1,5 +1,6 @@
-﻿using System;
-using System.Numerics;
+﻿
+
+using DZ7.core;
 
 namespace DZ7.repository
 {
@@ -7,8 +8,8 @@ namespace DZ7.repository
     {
         public override Complex GetResult(Complex z1, Complex z2)
         {
-            return new Complex(z1.Real * z2.Real - z1.Imaginary * z2.Imaginary,
-                + z1.Real * z2.Imaginary + z1.Imaginary * z2.Real);
+            return new Complex(z1.Real * z2.Real - z1.Img * z2.Img,
+                + z1.Real * z2.Img + z1.Img * z2.Real);
         }
     }
 }

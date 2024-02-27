@@ -1,5 +1,6 @@
-﻿using System;
-using System.Numerics;
+﻿
+
+using DZ7.core;
 
 namespace DZ7
 {
@@ -7,9 +8,9 @@ namespace DZ7
     {
         public override Complex GetResult(Complex z1, Complex z2)
         {
-            double Denominator = z2.Real * z2.Real + z2.Imaginary * z2.Imaginary;
-            return new Complex((z1.Real * z2.Real + z1.Imaginary * z2.Imaginary) / Denominator,
-                (z2.Real * z1.Imaginary - z2.Imaginary * z1.Real) / Denominator);
+            double Denominator = z2.Real * z2.Real + z2.Img * z2.Img;
+            return new Complex((z1.Real * z2.Real + z1.Img * z2.Img) / Denominator,
+                (z2.Real * z1.Img- z2.Img * z1.Real) / Denominator);
         }
     }
 }

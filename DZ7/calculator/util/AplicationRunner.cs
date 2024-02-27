@@ -11,7 +11,6 @@ namespace DZ7
 			CalculatorView calculatorView = new CalculatorView();
 			calculatorView.Run();
 		}
-
 	}
 }
 

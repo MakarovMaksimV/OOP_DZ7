@@ -1,5 +1,8 @@
 ﻿
-using System.Numerics;
+//using System.Numerics;
+
+
+using DZ7.core;
 
 namespace DZ7.repository
 {
@@ -9,7 +12,7 @@ namespace DZ7.repository
         {
 
             return new Complex (z1.Real + z2.Real,
-                + z1.Imaginary + z2.Imaginary); 
+                + z1.Img + z2.Img); 
         }
     }
 }
