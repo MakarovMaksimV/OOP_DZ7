@@ -1,5 +1,5 @@
 ﻿
-//using System.Numerics;
+using System.Text;
 using DZ7.core;
 using DZ7.repository;
 
@@ -7,10 +7,11 @@ namespace DZ7.calculator.view
 {
 	public class CalculatorView
 	{
-		Repository repository;
+		Repository rep = new Repository();
         double real;
         double img;
-        string? op;
+        string op;
+        string z3;
 
         public void Run()
 		{
@@ -37,31 +38,51 @@ namespace DZ7.calculator.view
 				{
 					case "+":
 						Addition add = new ();
-						Console.WriteLine(add.GetResult(z1, z2)); 
+                        z3 = add.GetResult(z1, z2).ToString(); 
 						break;
 					case "-":
 						Subtraction sub = new ();
-                        Console.WriteLine(sub.GetResult(z1, z2));
+                        z3 = sub.GetResult(z1, z2).ToString();
 						break;
 					case "*":
                         Multiplication mult = new ();
-                        Console.WriteLine(mult.GetResult(z1, z2));
+                        z3 = mult.GetResult(z1, z2).ToString(); ;
 						break;
 					case "/":
                         Division div = new ();
-                        Console.WriteLine(div.GetResult(z1, z2));
-                        Console.ReadKey();
+                        z3 = div.GetResult(z1, z2).ToString();
 						break;
 					default:
 						Console.WriteLine("Unknown operation");
 						break;
                 }
 
-				Console.WriteLine("Continue? (y/n)");
+                string ms = Writer(z1, op, z2);
+                Console.WriteLine(ms);
+             
+                rep.Write(ms);
+
+                Console.WriteLine("Continue? (y/n)");
 				string answer = Console.ReadLine();
 
 				if (answer == "n") break;
 			}
+        }
+
+		public string Writer(Complex z1, string op, Complex z2)
+		{
+			StringBuilder sb = new StringBuilder();
+            sb.Append("(");
+            sb.Append(z1.ToString());
+            sb.Append(") ");
+            sb.Append(op);
+            sb.Append(" (");
+            sb.Append(z2.ToString());
+            sb.Append(") ");
+            sb.Append("=");
+            sb.Append(" ");
+            sb.Append(z3);
+            return sb.ToString();
         }
     }
 }

@@ -5,7 +5,12 @@ namespace DZ7
 {
 	class Repository : IRepository
 	{
-        private readonly string path;
+        private readonly string path = "memory.txt" ;
+
+        public Repository()
+        {
+            this.path = path;
+        }
 
         public Repository(string path)
         {
@@ -14,8 +19,13 @@ namespace DZ7
 
         public void Write(string txt)
         {
-            StreamWriter sw = new(path, true);
-            sw.WriteLine(txt);
+            File.AppendAllText(path, txt);
+            //using (StreamWriter sw = File.AppendText(path))
+            //{
+            //    sw.WriteLine("Привет!");
+            //    sw.WriteLine(txt);
+            //}
+               
         }
     }
 }
