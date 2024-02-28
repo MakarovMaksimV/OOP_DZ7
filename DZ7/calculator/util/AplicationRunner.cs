@@ -8,8 +8,7 @@ namespace DZ7
 	{
 		public static void Run()
 		{
-			IRepository repository = new Repository();
-			repository.Create();
+			IRepository repository = new Repository("repository.txt");
 			CalculatorView calculatorView = new();
 			calculatorView.Run();
 		}

@@ -7,6 +7,7 @@ namespace DZ7.calculator.view
 {
 	public class CalculatorView
 	{
+		Repository repository;
         double real;
         double img;
         string? op;

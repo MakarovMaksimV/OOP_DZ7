@@ -1,6 +1,7 @@
 ﻿namespace DZ7.calculator.util
 {
-	enum Operation
+
+	public enum OperationType
 	{
 		ADD,
 		SUB,
