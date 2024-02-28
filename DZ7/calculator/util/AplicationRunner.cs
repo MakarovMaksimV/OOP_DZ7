@@ -1,14 +1,16 @@
-﻿using System;
+﻿
+using DZ7.calculator.repository.impl;
 using DZ7.calculator.view;
-using DZ7.repository;
 
 namespace DZ7
 {
 	public class AplicationRunner
 	{
-		public void run()
+		public static void Run()
 		{
-			CalculatorView calculatorView = new CalculatorView();
+			IRepository repository = new Repository();
+			repository.Create();
+			CalculatorView calculatorView = new();
 			calculatorView.Run();
 		}
 	}

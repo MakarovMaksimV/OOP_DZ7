@@ -26,7 +26,7 @@ namespace DZ7.core
 
         public override string ToString()
         {
-            return "Результат: " + real + "+" + img + "i";
+            return "Result: " + real + "+" + img + "i";
         }
     }
 

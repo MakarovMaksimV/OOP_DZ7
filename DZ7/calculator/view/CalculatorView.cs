@@ -9,59 +9,59 @@ namespace DZ7.calculator.view
 	{
         double real;
         double img;
-        string op;
+        string? op;
 
         public void Run()
 		{
-
 			while (true)
 			{
-				Console.Write("Введите вещественную часть числа: ");
+				Console.Write("Enter real part: ");
 				real = Convert.ToDouble(Console.ReadLine());
 
-                Console.Write("Введите мнимую часть числа: ");
+                Console.Write("Enter imaginary: ");
                 img = Convert.ToDouble(Console.ReadLine());
 				Complex z1 = new Complex(real,img);
 
-                Console.Write("Введите арифметический оператор (+,-,*,/): ");
+                Console.Write("Select operation (+,-,*,/): ");
                 op = Console.ReadLine();
 
-                Console.Write("Введите вещественную часть числа: ");
+                Console.Write("Enter real part: ");
                 real = Convert.ToDouble(Console.ReadLine());
 
-                Console.Write("Введите мнимую часть числа часть числа: ");
+                Console.Write("Enter imaginary: ");
                 img = Convert.ToDouble(Console.ReadLine());
                 Complex z2 = new Complex(real,img);
 
 				switch (op)
 				{
 					case "+":
-						Addition add = new Addition();
+						Addition add = new ();
 						Console.WriteLine(add.GetResult(z1, z2)); 
 						break;
 					case "-":
-						Subtraction sub = new Subtraction();
+						Subtraction sub = new ();
                         Console.WriteLine(sub.GetResult(z1, z2));
 						break;
 					case "*":
-                        Multiplication mult = new Multiplication();
+                        Multiplication mult = new ();
                         Console.WriteLine(mult.GetResult(z1, z2));
 						break;
 					case "/":
-                        Division div = new Division();
+                        Division div = new ();
                         Console.WriteLine(div.GetResult(z1, z2));
                         Console.ReadKey();
 						break;
 					default:
-						Console.WriteLine("Неизвестная команда");
+						Console.WriteLine("Unknown operation");
 						break;
-
                 }
-			
+
+				Console.WriteLine("Continue? (y/n)");
+				string answer = Console.ReadLine();
+
+				if (answer == "n") break;
 			}
-
         }
-
     }
 }
 
