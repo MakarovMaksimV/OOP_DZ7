@@ -1,13 +1,12 @@
-﻿
-using System.Text;
+﻿using System.Text;
 using DZ7.core;
 using DZ7.repository;
 
 namespace DZ7.calculator.view
 {
-	public class CalculatorView
-	{
-		Repository rep = new Repository();
+    public class CalculatorView
+    {
+        Repository rep = new Repository();
         double real;
         double img;
         string op;

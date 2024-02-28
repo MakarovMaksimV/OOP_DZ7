@@ -1,5 +1,4 @@
-﻿
-namespace DZ7.core
+﻿namespace DZ7.core
 {
     public class Complex
     {
@@ -29,6 +28,5 @@ namespace DZ7.core
             return real + "+" + img + "i";
         }
     }
-
 }
 

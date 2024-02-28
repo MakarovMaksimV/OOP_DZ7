@@ -1,5 +1,4 @@
-﻿using System;
-namespace DZ7.calculator.repository.impl
+﻿namespace DZ7.calculator.repository.impl
 {
 	interface IRepository
 	{

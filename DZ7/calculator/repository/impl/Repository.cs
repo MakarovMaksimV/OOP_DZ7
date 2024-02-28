@@ -5,7 +5,8 @@ namespace DZ7
 {
 	class Repository : IRepository
 	{
-        private readonly string path = "/Users/maksimmakarov/Desktop/GB/ООП/DZ/DZ7/DZ7/memory.txt";
+        private readonly string path = "/Users/maksimmakarov/" +
+            "Desktop/GB/ООП/DZ/DZ7/DZ7/memory.txt";
 
         public Repository()
         {
@@ -19,7 +20,8 @@ namespace DZ7
 
         public void Write(string txt)
         {
-            File.AppendAllText(path, txt);
+            File.AppendAllText(path, txt + "\n");
+
         }
     }
 }
