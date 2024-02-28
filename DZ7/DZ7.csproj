@@ -13,6 +13,7 @@
     <None Remove="calculator\repository\" />
     <None Remove="calculator\util\" />
     <None Remove="calculator\view\" />
+    <None Remove="calculator\repository\impl\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="calculator\" />
@@ -20,5 +21,6 @@
     <Folder Include="calculator\repository\" />
     <Folder Include="calculator\util\" />
     <Folder Include="calculator\view\" />
+    <Folder Include="calculator\repository\impl\" />
   </ItemGroup>
 </Project>

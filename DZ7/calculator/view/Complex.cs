@@ -1,15 +1,10 @@
 ﻿
-
 namespace DZ7.core
 {
     public class Complex
     {
         private double real;
         private double img;
-
-        public Complex()
-        {
-        }
 
         public Complex(double real, double img)
         {
@@ -29,6 +24,10 @@ namespace DZ7.core
             set { img = value; }
         }
 
+        public override string ToString()
+        {
+            return "Результат: " + real + "+" + img + "i";
+        }
     }
 
 }

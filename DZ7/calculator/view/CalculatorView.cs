@@ -7,12 +7,13 @@ namespace DZ7.calculator.view
 {
 	public class CalculatorView
 	{
+        double real;
+        double img;
+        string op;
 
-		public void Run()
+        public void Run()
 		{
-			double real;
-			double img;
-			string op;
+
 			while (true)
 			{
 				Console.Write("Введите вещественную часть числа: ");
@@ -36,7 +37,7 @@ namespace DZ7.calculator.view
 				{
 					case "+":
 						Addition add = new Addition();
-                        Console.WriteLine(add.GetResult(z1, z2).ToString());
+						Console.WriteLine(add.GetResult(z1, z2)); 
 						break;
 					case "-":
 						Subtraction sub = new Subtraction();
@@ -56,11 +57,11 @@ namespace DZ7.calculator.view
 						break;
 
                 }
-
+			
 			}
 
         }
 
-	}
+    }
 }
 
